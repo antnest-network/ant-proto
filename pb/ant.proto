@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option go_package = "ant.pro";
+
+
+// protoc --gofast_out=. --proto_path=./ ant.proto
+
+message Ping {
+	uint32 seq  = 1;
+}
+
+message Pong {
+	uint32 seq  = 1;
+}
+
+message PushBlockReq {
+	uint32 seq  = 1;
+	string cid = 2;
+	bytes  data = 3;
+}
+
+message PushBlockResp {
+	uint32 seq  = 1;
+	int32  code = 2;
+	string errString = 3;
+}
+
+message MigrateBlockReq {
+	uint32   seq  = 1;
+    string   fromAnt = 2;
+	repeated string cids = 3;
+}
+
+message MigrateBlockResp {
+	uint32 seq  = 1;
+	int32  code = 2;
+}
+
+message MigrateBlockResult {
+    string  fromAnt = 1;
+
+    message Block {
+        string cid = 1;
+    	int32  code = 2;
+    }
+   repeated Block blocks = 2;
+}
+
+message Cheque {
+	string chequebook       = 1;
+    string beneficiary      = 2;
+    string cumulativePayout = 3;
+    bytes signature         = 4;
+    string cumulativeReward = 5;
+}
+
+message Queens {
+    message Queen {
+        string id = 1;
+        string chequebook = 2;
+    	repeated string addrs = 3;
+    }
+	repeated Queen queens = 1;
+}

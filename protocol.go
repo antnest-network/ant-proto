@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/protocol"
-	pb "github.com/nb-ant/ant-proto/pb"
+	pb "github.com/antnest-network/ant-proto/pb"
 	"reflect"
 )
 

@@ -11,7 +11,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/protocol"
 	"github.com/libp2p/go-msgio"
 	"github.com/libp2p/go-msgio/protoio"
-	pb "github.com/nb-ant/ant-proto/pb"
+	pb "github.com/antnest-network/ant-proto/pb"
 	"io"
 	"reflect"
 	"sync"

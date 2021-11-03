@@ -1,4 +1,4 @@
-module github.com/nb-ant/ant-proto
+module github.com/antnest-network/ant-proto
 
 go 1.16
 
